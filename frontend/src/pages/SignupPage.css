@@ -1,0 +1,8 @@
+label {
+  align-self: baseline;
+}
+
+input[type=submit] {
+  margin-top: 1.0rem;
+  margin-bottom: 1.0rem;
+}

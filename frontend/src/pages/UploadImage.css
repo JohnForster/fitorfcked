@@ -1,0 +1,24 @@
+.cameraView {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.captureButton {
+  position:absolute;
+  bottom: 10px;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  border: 5px solid #fff9;
+
+}
+.cameraView > video {
+  max-width: 100%;
+  transform: rotateY(180deg)
+}
+
+.cameraView > img {
+  max-width: 100%;
+}
