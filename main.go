@@ -24,5 +24,9 @@ func main() {
 	r.POST("/auth/signup", controllers.CreateUser)
 	r.POST("/auth/login", controllers.Login)
 	r.GET("/user/profile", middleware.CheckAuth, controllers.GetUserProfile)
+	r.POST("/activity/new", middleware.CheckAuth, controllers.HandleFileUploadToBucket)
+	r.GET("/activity/all", middleware.CheckAuth, controllers.GetUserActivities)
+	r.GET("/get-fit-images/:path", middleware.CheckAuth, controllers.GetImage)
+	r.GET("/images/:path", controllers.HandleGetImage)
 	r.Run()
 }
